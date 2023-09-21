@@ -30,7 +30,7 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "Sample question",
+  "title": "Sample question {{$randomInt 0 99999999}}",
   "content": "Question content text"
 }
 
