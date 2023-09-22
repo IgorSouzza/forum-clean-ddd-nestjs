@@ -4,7 +4,7 @@ import { Either, left, right } from '@/core/either'
 
 import { WrongCredentialsError } from './errors/wrong-credentials-error'
 
-import { StudentsRepository } from '../repositories/student-repository'
+import { StudentsRepository } from '../repositories/students-repository'
 import { HashComparer } from '../cryptography/hash-comparer'
 import { Encrypter } from '../cryptography/encrypter'
 
