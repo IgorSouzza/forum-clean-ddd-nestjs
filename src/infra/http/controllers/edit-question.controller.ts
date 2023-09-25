@@ -34,11 +34,12 @@ export class EditQuestionController {
     @Param('id') questionId: string,
   ) {
     const { title, content } = body
+    const userId = user.sub
 
     const result = await this.editQuestion.execute({
       title,
       content,
-      authorId: user.sub,
+      authorId: userId,
       attachmentIds: [],
       questionId,
     })
