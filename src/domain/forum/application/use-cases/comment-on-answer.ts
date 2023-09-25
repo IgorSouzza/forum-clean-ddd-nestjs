@@ -1,3 +1,5 @@
+import { Injectable } from '@nestjs/common'
+
 import { Either, left, right } from '@/core/either'
 import { UniqueEntityID } from '@/core/entities/value-objects/unique-entity-id'
 
@@ -19,6 +21,7 @@ type CommentOnAnswerUseCaseResponse = Either<
   }
 >
 
+@Injectable()
 export class CommentOnAnswerUseCase {
   constructor(
     private readonly answersRepository: AnswersRepository,

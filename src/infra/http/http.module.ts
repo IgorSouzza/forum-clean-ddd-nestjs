@@ -14,6 +14,10 @@ import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answ
 import { EditAnswerUseCase } from '@/domain/forum/application/use-cases/edit-answer'
 import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete-answer'
 import { FetchQuestionAnswersUseCase } from '@/domain/forum/application/use-cases/fetch-question-answers'
+import { ChooseQuestionBestAnswerUseCase } from '@/domain/forum/application/use-cases/choose-question-best-answer'
+import { CommentOnQuestionUseCase } from '@/domain/forum/application/use-cases/comment-on-question'
+import { DeleteQuestionCommentUseCase } from '@/domain/forum/application/use-cases/delete-question-comment'
+import { CommentOnAnswerUseCase } from '@/domain/forum/application/use-cases/comment-on-answer'
 
 import { AuthenticateController } from './controllers/authenticate.controller'
 import { CreateAccountController } from './controllers/create-account.controller'
@@ -26,6 +30,10 @@ import { AnswerQuestionController } from './controllers/answer-question.controll
 import { EditAnswerController } from './controllers/edit-answer.controller'
 import { DeleteAnswerController } from './controllers/delete-answer.controller'
 import { FetchQuestionAnswersController } from './controllers/fetch-question-answers.controller'
+import { ChooseQuestionBestAnswerController } from './controllers/choose-question-best-answer.controller'
+import { CommentOnQuestionController } from './controllers/comment-on-question.controller'
+import { DeleteQuestionCommentController } from './controllers/delete-question-comment'
+import { CommentOnAnswerController } from './controllers/comment-on-answer.controller'
 
 @Module({
   imports: [DatabaseModule, CryptographyModule],
@@ -41,6 +49,10 @@ import { FetchQuestionAnswersController } from './controllers/fetch-question-ans
     EditAnswerController,
     DeleteAnswerController,
     FetchQuestionAnswersController,
+    ChooseQuestionBestAnswerController,
+    CommentOnQuestionController,
+    DeleteQuestionCommentController,
+    CommentOnAnswerController,
   ],
   providers: [
     CreateQuestionUseCase,
@@ -54,6 +66,10 @@ import { FetchQuestionAnswersController } from './controllers/fetch-question-ans
     EditAnswerUseCase,
     DeleteAnswerUseCase,
     FetchQuestionAnswersUseCase,
+    ChooseQuestionBestAnswerUseCase,
+    CommentOnQuestionUseCase,
+    DeleteQuestionCommentUseCase,
+    CommentOnAnswerUseCase,
   ],
 })
 export class HttpModule {}
