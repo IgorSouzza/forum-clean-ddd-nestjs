@@ -1,3 +1,5 @@
+import { Injectable } from '@nestjs/common'
+
 import { Either, left, right } from '@/core/either'
 
 import { AnswersRepository } from '@/domain/forum/application/repositories/answers-repository'
@@ -10,6 +12,7 @@ type DeleteAnswerUseCaseRequest = {
 
 type DeleteAnswerUseCaseResponse = Either<ResourceNotFoundError, null>
 
+@Injectable()
 export class DeleteAnswerUseCase {
   constructor(private readonly answersRepository: AnswersRepository) {}
 
