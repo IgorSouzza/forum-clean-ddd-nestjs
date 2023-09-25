@@ -18,6 +18,9 @@ import { ChooseQuestionBestAnswerUseCase } from '@/domain/forum/application/use-
 import { CommentOnQuestionUseCase } from '@/domain/forum/application/use-cases/comment-on-question'
 import { DeleteQuestionCommentUseCase } from '@/domain/forum/application/use-cases/delete-question-comment'
 import { CommentOnAnswerUseCase } from '@/domain/forum/application/use-cases/comment-on-answer'
+import { DeleteAnswerCommentUseCase } from '@/domain/forum/application/use-cases/delete-answer-comment'
+import { FetchQuestionCommentsUseCase } from '@/domain/forum/application/use-cases/fetch-question-comments'
+import { FetchAnswerCommentsUseCase } from '@/domain/forum/application/use-cases/fetch-answer-comments'
 
 import { AuthenticateController } from './controllers/authenticate.controller'
 import { CreateAccountController } from './controllers/create-account.controller'
@@ -34,6 +37,9 @@ import { ChooseQuestionBestAnswerController } from './controllers/choose-questio
 import { CommentOnQuestionController } from './controllers/comment-on-question.controller'
 import { DeleteQuestionCommentController } from './controllers/delete-question-comment'
 import { CommentOnAnswerController } from './controllers/comment-on-answer.controller'
+import { DeleteAnswerCommentController } from './controllers/delete-answer-comment'
+import { FetchQuestionCommentsController } from './controllers/fetch-question-comments.controller'
+import { FetchAnswerCommentsController } from './controllers/fetch-answer-comments.controller'
 
 @Module({
   imports: [DatabaseModule, CryptographyModule],
@@ -53,6 +59,9 @@ import { CommentOnAnswerController } from './controllers/comment-on-answer.contr
     CommentOnQuestionController,
     DeleteQuestionCommentController,
     CommentOnAnswerController,
+    DeleteAnswerCommentController,
+    FetchQuestionCommentsController,
+    FetchAnswerCommentsController,
   ],
   providers: [
     CreateQuestionUseCase,
@@ -70,6 +79,9 @@ import { CommentOnAnswerController } from './controllers/comment-on-answer.contr
     CommentOnQuestionUseCase,
     DeleteQuestionCommentUseCase,
     CommentOnAnswerUseCase,
+    DeleteAnswerCommentUseCase,
+    FetchQuestionCommentsUseCase,
+    FetchAnswerCommentsUseCase,
   ],
 })
 export class HttpModule {}
